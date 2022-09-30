@@ -7,6 +7,8 @@ void setup()
       textSize(32);
   }
 
+int highest = 0;
+
 void draw()
   {
     fill(255);
@@ -19,8 +21,11 @@ void draw()
         numDots+=bob.dot;
       }
     }
-     System.out.println(numDots);
+    if (numDots > highest){
+      highest = numDots;
+    }
      text("sum of dice = " + numDots,700,300);
+     text("highest = " + highest, 700,400);
     }
     
   void mousePressed()
